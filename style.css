@@ -1,0 +1,203 @@
+/* Import font keren dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFB6C1;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Penampung utama untuk konten */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    
+    /* Ini dia animasinya! */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Animasi Keyframes (muncul dari bawah) */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Atur "delay" animasi agar muncul satu per satu */
+.gallery-section { animation-delay: 0.2s; }
+.playlist-section { animation-delay: 0.4s; }
+.feedback-section { animation-delay: 0.6s; }
+footer { animation-delay: 0.8s; }
+
+
+/* --- Bagian Header (Nama & Deskripsi) --- */
+header {
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+h2 {
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #7f8c8d;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.galeri-grid {
+    /* 1. Mengaktifkan layout Grid */
+    display: grid; 
+    
+    /* 2. Membuat 3 kolom dengan lebar yang sama (1fr = 1 bagian) */
+    grid-template-columns: repeat(3, 1fr); 
+    
+    /* 3. Memberi jarak antar foto (sesuaikan angkanya) */
+    gap: 8px; 
+}
+
+.galeri-grid img {
+    /* 4. Membuat gambar mengisi 100% lebar kotaknya */
+    width: 100%; 
+    
+    /* 5. (Opsional) Membuat semua kotak foto jadi persegi */
+    aspect-ratio: 1 / 1; 
+    
+    /* 6. (Penting) Mencegah gambar menjadi gepeng/penyok */
+    object-fit: cover; 
+    
+    /* 7. (Opsional) Memberi sudut melengkung pada foto */
+    border-radius: 8px; 
+}
+
+/* --- Bagian Feedback Form --- */
+.feedback-form {
+    display: grid;
+    gap: 15px; /* Memberi jarak antar elemen form */
+}
+
+.feedback-form label {
+    font-weight: 600;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek "sentuh" atau fokus */
+.feedback-form input[type="text"]:focus,
+.feedback-form input[type="email"]:focus,
+.feedback-form textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52,152,219,0.3);
+    outline: none;
+}
+
+.feedback-form button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #2980b9;
+    transform: scale(1.02); /* Efek sentuh/hover */
+}
+
+/* --- Bagian Footer (Sosial Media) --- */
+footer {
+    text-align: center;
+    margin-top: 0; /* Ubah dari 20px ke 0 jika .container sudah punya margin */
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+
+.social-links {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    font-size: 2rem; /* Ukuran ikon */
+    margin: 0 15px;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efek "sentuh" atau hover pada ikon */
+.social-links a:hover {
+    color: #3498db; /* Warna berubah saat disentuh */
+    transform: translateY(-5px); /* Ikon bergerak ke atas */
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* --- Membuatnya Responsif (Bisa disentuh/dibuka di HP) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        margin: 10px auto;
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .gallery-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .social-links a {
+        font-size: 1.8rem;
+        margin: 0 10px;
+    }
+

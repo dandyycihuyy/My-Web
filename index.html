@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To My Web</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="container">
+        <h1>Halo, saya Dandy Ahmad</h1>
+        <p>Saya merupakan pelajar dari SMK Negeri 67 Jakarta</p>
+    </header>
+
+    <main>
+        <section class="container gallery-section">
+            <h2>Galeri Foto</h2>
+            <div class="galeri-grid">
+    <img src="foto 1.jpg" alt="Foto 1">
+    <img src="foto 2.jpg" alt="Foto 2">
+    <img src="foto 3.jpg" alt="Foto 3">
+    
+    <img src="foto 4.jpg" alt="Foto 4">
+    <img src="path/ke/foto5.jpg" alt="Foto 5">
+    <img src="path/ke/foto6.jpg" alt="Foto 6">
+    
+    <img src="path/ke/foto7.jpg" alt="Foto 7">
+    <img src="path/ke/foto8.jpg" alt="Foto 8">
+    <img src="path/ke/foto9.jpg" alt="Foto 9">
+</div>
+
+        </section>
+
+        <section class="container playlist-section">
+            <h2>Playlist Favorit</h2>
+            <p>Saya suka mendengarkan musik ketika lagi belajar ataupun saat sedang bosan</p>
+            
+            <iframe 
+                style="border-radius:12px" 
+src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" 
+                width="100%" 
+                height="380" 
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </section>
+
+        <section class="container feedback-section">
+            <h2>Kasih Feedback</h2>
+            <p>Punya pesan/saran? Sung ketik di bawah 👇</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="feedback-form">
+                <input type="hidden" name="access_key" value="a393190d-ea44-4f33-b5f7-6fd18ae8583c"> <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="dandyahmad139@gmail.com" title="Send Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://tiktok.com/@dannsoniced" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com/@dannftabyss." target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com/dandyyahmad_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2025 | Betmen</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
